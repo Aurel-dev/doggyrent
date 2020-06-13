@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post "/bookings/:id/review", to: "reviews#create"
   get "/bookings/:id/edit", to:"bookings#edit"
   delete "/bookings/:id", to: "bookings#destroy"
-
+  resources :dogs, only: [:show]
   get "/dogs", to: "dogs#index"
   get "/dogs/:id", to: "dogs#show"
   get "/dogs/:id/edit", to: "dogs#edit"
