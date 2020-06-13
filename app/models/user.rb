@@ -1,11 +1,6 @@
 class User < ApplicationRecord
-    has_many :dogs
-    has_many :reviews
-
-
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end
-# class Dose < ApplicationRecord
-#     belongs_to :cocktail
-#     belongs_to :ingredient
-#     validates :cocktail, uniqueness: { scope: :ingredient }
-#   end
