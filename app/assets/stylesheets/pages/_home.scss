@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+.container{
+    background-color: white;
+    width: 1680px;
+    height: 489px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+}
+
+.bouton{
+    width: 130px;
+    height: 40px;
+    background-color: #F8846B;
+    color: white;
+    
+}

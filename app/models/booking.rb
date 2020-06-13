@@ -1,4 +1,4 @@
 class Booking < ApplicationRecord
+    has_many: reviews
     has_many: dogs
-    belongs_to :review
 end
