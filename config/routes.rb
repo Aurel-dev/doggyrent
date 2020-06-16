@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   delete "/bookings/:id", to: "bookings#destroy"
 
   get "/dogs", to: "dogs#index"
-  get "/dogs/:id", to:"dogs#show"
-  get "/dogs/:id/edit", to:"dogs#edit"
+  get "/dogs/:id", to: "dogs#show"
+  get "/dogs/:id/edit", to: "dogs#edit"
   get "/dogs/new", to: "dogs#new"
   post "/dogs", to: "dogs#create"
   delete "/dogs/:id", to: "dogs#destroy"
