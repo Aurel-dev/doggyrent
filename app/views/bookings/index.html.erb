@@ -2,12 +2,11 @@
   <h1>Booking index</h1>
 
 
-
-
  <% @bookings.each do |booking| %>
- <p><%= booking.user_id %></p>
-  <%= booking.booking_date %>
+ <p> Booking User N°: <%= booking.user_id %></p>
+   <p>Booking Dog N°<%= booking.dog_id %></p>
+  <p>Booking date : <%= booking.booking_date %> </p>
   <% end %>
 
 
-<%= link_to("Faire une nouvelle réservation", bookings_path, class:"btn btn-success") %>
+#<%= link_to("Faire une nouvelle réservation", dogs_path, class:"btn btn-success") %>

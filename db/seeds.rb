@@ -33,7 +33,7 @@ Dog.create!(
 Booking.create!(
     user_id: User.first.id,
     dog_id: Dog.first.id,
-    check_in_date: Date.today
+    booking_date: Date.today
 )
 
 Review.create!(
