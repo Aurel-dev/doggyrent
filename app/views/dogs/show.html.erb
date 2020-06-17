@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <h1>Infos sur chien n°....</h1>
 
 <p>
@@ -9,3 +10,5 @@
   <%= @dog.description %>
 
 </p>
+  <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
+  <%=  link_to 'booking', bookings_path , method: :get,  class: "generique" %>
