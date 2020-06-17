@@ -1,12 +1,22 @@
-<h1>Liste de nos chiens disponibles</h1>
+<%= render 'shared/navbar' %>
+ 
 <table>
     <tbody></tbody>
         <% @dogs.each do |dog| %>
-            <tr>
-                <td><%= dog.name %></td>
-                <td><%= dog.description %></td>
-                <td><%= link_to 'Show', dog %></td>
-            </tr>
+           
+           <div class="carde">
+            <div class="card-product">
+            <img src="" />
+            <div class="card-product-infos">
+                <%= dog.name %>
+            <%= dog.description %>
+            <%= link_to 'Show', dog %>
+            </div>
+            </div>
+            </div>
+                
+        
         <% end %>
     </tbody>
 </table>
+  
