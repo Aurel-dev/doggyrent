@@ -8,29 +8,36 @@
 require 'json'
 require 'open-uri'
 
+Review.destroy_all
+Dog.destroy_all
+User.destroy_all
 Booking.destroy_all
-Booking.create!(
-    user_id: "Maxence"
-    booking_date: 18 11 2012
+
+
+User.create!(
+    email: "blabla@gmail.com",            
+    password: "123456"
 )
 
-Dog.destroy_all
+
 Dog.create!(
-    name: "Gaspar"
-    race: "Pitbull"
-    location: "Rue Massena"
-    user: "Fx"
-    age: 19
-    price: 13.5
+    name: "Gaspar",
+    race: "Pitbull",
+    location: "Rue Massena",
+    user_id: User.first.id,
+    age: 19,
+    price: 13.5,
     description: "Cherche a se reproduire"
 )
 
+Booking.create!(
+    user_id: User.first.id,
+    dog_id: Dog.first.id,
+    check_in_date: Date.today
+)
 
-
-
-Review.destroy_all
 Review.create!(
-    comment: "Sympa"
-    rating: 4
-    booking: 4
+    comment: "Sympa",
+    rating: 4,
+    booking_id: Booking.first.id
 )

@@ -5,6 +5,9 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
+  def show
+  end
+
   def new
     @booking = Booking.new
   end
@@ -16,6 +19,9 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
   end
 
   def destroy
@@ -30,6 +36,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:name, :photo)
+    params.require(:booking).permit(:user_id)
   end
 end
