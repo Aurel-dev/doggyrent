@@ -8,7 +8,6 @@ class CreateDogs < ActiveRecord::Migration[6.0]
       t.integer :age
       t.integer :price
       t.string :description
-
       t.timestamps
     end
   end
