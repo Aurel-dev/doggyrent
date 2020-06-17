@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   post "/bookings/:id/review", to: "reviews#create"
   get "/bookings/:id/edit", to:"bookings#edit"
   delete "/bookings/:id", to: "bookings#destroy"
-
+  resources :dogs, only: [:show]
   get "/dogs", to: "dogs#index"
   get "/dogs/:id", to: "dogs#show"
   get "/dogs/:id/edit", to: "dogs#edit"
