@@ -1,12 +1,20 @@
-
-  <h1>Booking index</h1>
-
+<h1>Mes réservations</h1>
 
  <% @bookings.each do |booking| %>
  <p> Booking User N°: <%= booking.user_id %></p>
-   <p>Booking Dog N°<%= booking.dog_id %></p>
+  <p>Booking Dog N°<%= booking.dog_id %></p>
   <p>Booking date : <%= booking.booking_date %> </p>
+  <%= link_to 'Laisser un avis', new_review_path(booking.id) %></td>
+  <%= link_to 'Modifier la réservation', edit_booking_path(booking.id) %></td>
+  <%= link_to 'Annuler la réservation', delete_booking_path(booking.id), method: :delete %></i>
   <% end %>
+  </td>
 
 
-#<%= link_to("Faire une nouvelle réservation", dogs_path, class:"btn btn-success") %>
+
+<br><br><br><br><br><br>
+<%= link_to("Faire une nouvelle réservation", dogs_path, class:"btn btn-success") %>
+<br><br><br><br><br><br>
+<%= link_to "Revenir à l'accueil", root_url %>
+
+

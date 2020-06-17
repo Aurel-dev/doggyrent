@@ -1,0 +1,22 @@
+<h1>Infos sur réservation n°....</h1>
+
+ <p> Booking User N°: <%= booking.user_id %>
+Booking Dog N°<%= booking.dog_id %>
+  Booking date : <%= booking.booking_date %> </p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+  <%= @dog.location %>
+  <%= @dog.user %>
+  <%= @dog.price %>
+  <%= @dog.description %>
+
+</p>
+
+<br><br><br><br><br><br>
+<%= link_to("Faire une nouvelle réservation", dogs_path, class:"btn btn-success") %>
+<br><br><br><br><br><br>
+<%= link_to "Revenir à l'accueil", root_url %>
+
+<%= link_to "Mes réservations", bookings_path %>

@@ -1,6 +1,18 @@
 
 <h1>Pages#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
-<p>booking.user_id</p>
-<p>booking.name</p>
 
+<h1 class="text-center ">New Review</h1>
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3 task-form">
+      <%= form_for(@review) do |f| %>
+      <%= f.label :title  %>
+      <%= f.text_field :title, class:"form-control" %>
+      <%= f.label :details %>
+      <%= f.text_area :details, class:"form-control"  %>
+      <%= f.submit class:"form-control form-btn" %>
+   <% end %>
+  </div>
+</div>
+
+<%= link_to "Mes réservations", bookings_path %>

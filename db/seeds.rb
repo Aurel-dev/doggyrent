@@ -19,6 +19,10 @@ User.create!(
     password: "123456"
 )
 
+User.create!(
+    email: "tututu@gmail.com",            
+    password: "1234567"
+)
 
 Dog.create!(
     name: "Gaspar",
@@ -30,9 +34,25 @@ Dog.create!(
     description: "Cherche a se reproduire"
 )
 
+Dog.create!(
+    name: "Flan",
+    race: "Pitbull",
+    location: "Rue Massena",
+    user_id: User.second.id,
+    age: 19,
+    price: 13.5,
+    description: "Un peu mou"
+)
+
 Booking.create!(
     user_id: User.first.id,
     dog_id: Dog.first.id,
+    booking_date: Date.today
+)
+
+Booking.create!(
+    user_id: User.second.id,
+    dog_id: Dog.second.id,
     booking_date: Date.today
 )
 
@@ -40,4 +60,10 @@ Review.create!(
     comment: "Sympa",
     rating: 4,
     booking_id: Booking.first.id
+)
+
+Review.create!(
+    comment: "Bof",
+    rating: 4,
+    booking_id: Booking.second.id
 )
