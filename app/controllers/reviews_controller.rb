@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
 
+
     before_action :set_review, only: [ :show, :update, :destroy ]
 
     def index
@@ -45,5 +46,24 @@ class ReviewsController < ApplicationController
 
     def review_params
         params.require(:review).permit(:booking, :comment, :rating)
+
+    def create_user
+        @user = User.find(params[:user_id])
+        @review = Review.new(review_params)
+        @review.user = @user
+
+      if @review.save
+        redirect_to user_path(@user)
+      else
+        @booking = Booking.new
+        render "booking/id"
+      end
+    end
+
+    private
+  
+    def review_params
+      params.require(:review).permit(:rating, :comment)
+
     end
 end
