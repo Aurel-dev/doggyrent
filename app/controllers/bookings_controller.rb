@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
       redirect_to bookings_path(@booking)
     else
       render :new
+    end
   end
 
   def destroy
@@ -25,11 +26,10 @@ class BookingsController < ApplicationController
  private
 
   def find_booking
-    @booking = Booking.find(params[id:])
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params
     params.require(:booking).permit(:name, :photo)
   end
-
 end

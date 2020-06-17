@@ -15,4 +15,22 @@ Booking.create!(
 )
 
 Dog.destroy_all
-Dog.create(name: "Dalmatien")
+Dog.create!(
+    name: "Gaspar"
+    race: "Pitbull"
+    location: "Rue Massena"
+    user: "Fx"
+    age: 19
+    price: 13.5
+    description: "Cherche a se reproduire"
+)
+
+
+
+
+Review.destroy_all
+Review.create!(
+    comment: "Sympa"
+    rating: 4
+    booking: 4
+)
