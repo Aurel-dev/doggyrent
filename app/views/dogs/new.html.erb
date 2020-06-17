@@ -1,0 +1,15 @@
+<h1>Creation de Dog</h1>
+<div class= "container">
+  <div>
+      <%= simple_form_for @dog do |f| %>
+      <%= f.input :race %>
+      <%= f.input :location %>
+      <%= f.input :name %>
+      <%= f.input :age %>
+      <%= f.input :price %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :description %>
+    <%= f.submit "ajouter votre chien", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
