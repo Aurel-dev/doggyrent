@@ -27,7 +27,7 @@ User.create!(
 Dog.create!(
     name: "Gaspar",
     race: "Pitbull",
-    location: "La Plage, 122 rue Solférino - Lille",
+    location: "Lille",
     user_id: User.first.id,
     age: 19,
     price: 13,
@@ -37,7 +37,7 @@ Dog.create!(
 Dog.create!(
     name: "Covid",
     race: "Malinois",
-    location: "57 Rue de Varenne, 75007 Paris",
+    location: "Paris",
     user_id: User.second.id,
     age: 7,
     price: 24,
