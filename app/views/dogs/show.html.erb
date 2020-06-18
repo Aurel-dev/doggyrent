@@ -11,4 +11,4 @@
 
 </p>
   <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
-  <%=  link_to 'booking', bookings_path , method: :get,  class: "generique" %>
+  <%=  link_to 'booking', new_booking_path(@dog.id) , method: :get,  class: "generique" %>
