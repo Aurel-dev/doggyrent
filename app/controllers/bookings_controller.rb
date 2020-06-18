@@ -26,6 +26,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+  # @booking.reviews.each do |review|
+  # review.destroy
+  # end
   @booking.destroy
   redirect_to bookings_path(@booking)
   end
