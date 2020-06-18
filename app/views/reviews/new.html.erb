@@ -1,1 +1,13 @@
-<h3>Add a review</h3>
+
+<h1>Laissez un avis</h1>
+<div class= "container">
+  <div>
+      <%= simple_form_for @review do |f| %>
+      <%= f.input :rating %>
+      <%= f.input :booking_id %>
+      <%= f.text_area :comment, placeholder: "Laisser un avis" %>
+    <%= f.submit "Publier votre avis", class: "btn btn-primary" %>
+      <%= f.button :button, "Annuler", type: "reset", class: "btn-outline-secondary" %>
+    <% end %>
+  </div>
+</div>
