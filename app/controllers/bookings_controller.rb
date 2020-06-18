@@ -2,16 +2,21 @@ class BookingsController < ApplicationController
   before_action :find_booking, only: [:show, :edit, :update, :destroy ]
 
   def index 
-  @bookings = Booking.all
+    @bookings = Booking.all
   end
 
   def show
-  redirect_to dogs_path
+    redirect_to dogs_path
   end
 
   def new
+<<<<<<< HEAD
   @booking = Booking.new
   @dog = Dog.find(params[:dog_id])
+=======
+    @booking = Booking.new
+    @dog = Dog.find(params[:dog_id])
+>>>>>>> f65091c532aa74ab7e0af3e7ae9d2279b446fe59
   end
 
   def create
