@@ -1,16 +1,14 @@
+<%= render 'shared/navbar' %>
 
-<h1>Pages#new</h1>
-
-<h1 class="text-center ">New Review</h1>
-
-<div class="row">
+<div class="bookingform">
   <div class="col-sm-6 col-sm-offset-3 task-form">
+  <h1 class="text-center ">New Review</h1>
       <%= simple_form_for(@booking) do |f| %>
       <%= f.input :check_in_date, class:"form-control" %>
       <%= f.input :check_out_date, class:"form-control" %>
       <%= f.submit class:"form-control form-btn" %>
+      <%=  link_to 'booking', create_dog_booking_path(@dog) , method: :post,  class: "generique" %>
    <% end %>
   </div>
 </div>
-
 <%= link_to "Mes réservations", bookings_path %>

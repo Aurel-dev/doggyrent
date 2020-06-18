@@ -1,14 +1,25 @@
 <%= render 'shared/navbar' %>
 <h1>Infos sur chien n°....</h1>
-
-<p>
-  <strong>Name:</strong>
-  <%= @dog.name %>
-  <%= @dog.location %>
-  <%= @dog.user %>
-  <%= @dog.price %>
-  <%= @dog.description %>
-
-</p>
+<div class= "containerposting">
+  <div class="containershowdog">
+    <strong>Name</strong>
+    <%= @dog.name %>
+    <br>
+    <strong>Location</strong>
+    <%= @dog.location %>
+    <br>
+    <strong>User</strong>
+    <%= @dog.user %>
+    <br>
+    <strong>Price</strong>
+    <%= @dog.price %>
+    <br>
+    <strong>Description</strong>
+    <%= @dog.description %>
+  </div>
   <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
   <%=  link_to 'booking', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
+  </div>
+<br>
+<br>
+<br>
