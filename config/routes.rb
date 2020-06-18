@@ -16,4 +16,4 @@ Rails.application.routes.draw do
   resources :dogs do 
     resources :bookings, only: [:new, :create]
   end
-  end 
+end 
