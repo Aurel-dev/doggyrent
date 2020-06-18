@@ -27,7 +27,7 @@ User.create!(
 Dog.create!(
     name: "Gaspar",
     race: "Pitbull",
-    location: "Rue Massena",
+    location: "Lille",
     user_id: User.first.id,
     age: 19,
     price: 13.5,
@@ -37,7 +37,7 @@ Dog.create!(
 Dog.create!(
     name: "Flan",
     race: "Pitbull",
-    location: "Rue Massena",
+    location: "Paris",
     user_id: User.second.id,
     age: 19,
     price: 13.5,

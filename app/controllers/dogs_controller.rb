@@ -3,7 +3,11 @@ class DogsController < ApplicationController
     before_action :set_dog, only: [:show, :edit, :update, :destroy]
 
     def index
-        @dogs = Dog.all
+        if params[:query].present?
+            @dogs = Dog.where(location: params[:query])
+        else
+            @dogs = Dog.all
+        end
     end
     
     def new 
