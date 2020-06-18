@@ -27,21 +27,21 @@ User.create!(
 Dog.create!(
     name: "Gaspar",
     race: "Pitbull",
-    location: "Rue Massena",
+    location: "La Plage, 122 rue Solférino - Lille",
     user_id: User.first.id,
     age: 19,
-    price: 13.5,
+    price: 13,
     description: "Cherche a se reproduire"
 )
 
 Dog.create!(
-    name: "Flan",
-    race: "Pitbull",
-    location: "Rue Massena",
+    name: "Covid",
+    race: "Malinois",
+    location: "57 Rue de Varenne, 75007 Paris",
     user_id: User.second.id,
-    age: 19,
-    price: 13.5,
-    description: "Un peu mou"
+    age: 7,
+    price: 24,
+    description: "Aime les personnes fragiles"
 )
 
 Booking.create!(
@@ -57,13 +57,13 @@ Booking.create!(
 )
 
 Review.create!(
-    comment: "Sympa",
-    rating: 4,
+    comment: "Belle bête",
+    rating: 5,
     booking_id: Booking.first.id
 )
 
 Review.create!(
-    comment: "Bof",
-    rating: 4,
+    comment: "N'aime pas rester confiné",
+    rating: 2,
     booking_id: Booking.second.id
 )

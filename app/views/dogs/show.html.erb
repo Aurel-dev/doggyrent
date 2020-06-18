@@ -5,6 +5,9 @@
     <strong>Name</strong>
     <%= @dog.name %>
     <br>
+    <strong>Race</strong>
+    <%= @dog.race %>
+    <br>
     <strong>Location</strong>
     <%= @dog.location %>
     <br>
@@ -16,6 +19,14 @@
     <br>
     <strong>Description</strong>
     <%= @dog.description %>
+    <br>
+
+Prévoir la review du dog : 
+<br>
+ <%= @dog.reviews %>
+
+  Note :
+
   </div>
   <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
   <%=  link_to 'booking', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
@@ -23,4 +34,5 @@
 <br>
 <br>
 <br>
+
 
