@@ -1,6 +1,5 @@
+<%= render 'shared/navbar' %>
 <h1>Modifier ma réservation</h1>
-
-
   <p>Booking User N°: <%= @booking.user_id %></p>
   <p>Booking Dog N°<%= @booking.dog_id %></p>
   <p>Booking date : <%= @booking.booking_date %> </p>
@@ -11,3 +10,4 @@
 <br><br><br><br><br><br>
 <%= link_to "Revenir à l'accueil", root_url %>
 
+  <%= render 'shared/footer' %>
