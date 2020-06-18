@@ -5,14 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
-
 .card{
-
-    display: flex;
-    flex-wrap: wrap;
     width: 1600px;
     height: 600px;
+    flex-wrap: wrap;
+    display: flex;
     align-items: center;
 }
 .txt {

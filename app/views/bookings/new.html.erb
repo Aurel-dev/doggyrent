@@ -1,8 +1,11 @@
 <%= render 'shared/navbar' %>
 
 <div class="bookingform">
+
+<h1 class="text-center ">Réservez ce chien</h1>
+
+<div class="row">
   <div class="col-sm-6 col-sm-offset-3 task-form">
-  <h1 class="text-center ">New Review</h1>
       <%= simple_form_for(@booking) do |f| %>
       <%= f.input :check_in_date, class:"form-control" %>
       <%= f.input :check_out_date, class:"form-control" %>
@@ -11,4 +14,10 @@
    <% end %>
   </div>
 </div>
-<%= link_to "Mes réservations", bookings_path %>
+(Lien vers le bouton booking a valider)
+<br>
+<br>
+<br>
+<%= link_to "Voir mes réservations", bookings_path %>
+
+
