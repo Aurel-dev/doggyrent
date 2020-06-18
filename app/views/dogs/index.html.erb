@@ -1,18 +1,19 @@
 <%= render 'shared/navbar' %>
- 
+<%= render 'shared/search-bar' %>
 <table>
     <tbody></tbody>
     <% if @dogs.length == 0 %>
-        <p>Hello</p>
+        <center> <h2>Ouaf ! Aucun chien n'est disponible dans la ville indiquée !</h2>
+        <%= image_tag "chienclindoeil.jpg"%>
+        <br>
+        <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
+        </center>
     <% end %>
         <% @dogs.each do |dog| %>
            
            <div class="carde">
             <div class="card-product">
-            <img src="images/img1.jpg" />
-            <%= image_tag "img1.svg",class: :img %>
-            <%# <%= cl_image_tag("…/v1592465738/gnrqphwbzqqn0etfr8ta.jpg",
-            width: 400, height: 300, crop: :fill) %> %>
+            <%= image_tag "chien.jpg"%>
             <div class="card-product-infos">
                 <%= dog.name %>
             <%= dog.description %>
@@ -25,4 +26,5 @@
         <% end %>
     </tbody>
 </table>
-  
+
+<%= render 'shared/footer' %>
