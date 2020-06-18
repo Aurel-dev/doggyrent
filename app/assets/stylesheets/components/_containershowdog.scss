@@ -1,14 +1,15 @@
 .containerposting{
     margin-top: 50px;
     background-color: white;
-    height: 600px;
+    height: 450px;
     width: 1300px;
+    padding: 20px;
 }
 
 .containershowdog{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
     padding: 30px;
 }
