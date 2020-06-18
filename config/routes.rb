@@ -8,10 +8,12 @@ Rails.application.routes.draw do
 
 
   get "/bookings", to: "bookings#index"
-  post "/bookings", to: "bookings#create"
+  post "/bookings/create", to: "bookings#create", as: :create
   post "/bookings/:id/review", to: "reviews#create"
   get "/bookings/:booking_id/reviews/new", to: "reviews#new" , as: :new_review
   get "/bookings/:booking_id/edit", to: "bookings#edit" , as: :edit_booking
   delete "/bookings/:booking_id/delete", to: "bookings#destroy",  as: :delete_booking
-  resources :dogs
-end
+  resources :dogs do 
+    resources :bookings, only: [:new, :create]
+  end
+  end
