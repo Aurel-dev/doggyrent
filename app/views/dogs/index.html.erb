@@ -2,6 +2,9 @@
  
 <table>
     <tbody></tbody>
+    <% if @dogs.length == 0 %>
+        <p>Hello</p>
+    <% end %>
         <% @dogs.each do |dog| %>
            
            <div class="carde">

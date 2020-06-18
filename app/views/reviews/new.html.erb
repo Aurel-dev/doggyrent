@@ -5,8 +5,7 @@
 
   <h1>Laissez un avis</h1>
       <%= simple_form_for @review do |f| %>
-      <%= f.input :rating %>
-      
+      <%= f.input :rating, inclusion:{ in: 0..5, :presence => true }%>
       <%= f.input :comment, placeholder: "Laisser un avis" %>
       <%= f.submit "Publier votre avis", class: "generique" %>
       <%= f.button :button, "Annuler", type: "reset", class: "generique" %>
