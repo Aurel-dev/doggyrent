@@ -10,26 +10,21 @@ class BookingsController < ApplicationController
   end
 
   def new
-<<<<<<< HEAD
-  @booking = Booking.new
-  @dog = Dog.find(params[:dog_id])
-=======
     @booking = Booking.new
     @dog = Dog.find(params[:dog_id])
->>>>>>> f65091c532aa74ab7e0af3e7ae9d2279b446fe59
   end
 
   def create
-  @dog = Dog.find(params[:dog_id])
-  @booking = Booking.new(booking_params)
-  @booking.dog = @dog
-  @booking.user = current_user
-  @booking.booking_date = Date.today
-    if @booking.save
-    redirect_to bookings_path(@booking)
-    else
-    render :new
-    end
+    @dog = Dog.find(params[:dog_id])
+    @booking = Booking.new(booking_params)
+    @booking.dog = @dog
+    @booking.user = current_user
+    @booking.booking_date = Date.today
+      if @booking.save
+      redirect_to bookings_path(@booking)
+      else
+      render :new
+      end
   end
 
   def edit

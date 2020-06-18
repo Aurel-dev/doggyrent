@@ -11,21 +11,21 @@
     <strong>Location</strong>
     <%= @dog.location %>
     <br>
-    <strong>User</strong>
-    <%= @dog.user %>
+    <strong>User N°</strong>
+    <%= @dog.user.id %>
     <br>
     <strong>Price</strong>
-    <%= @dog.price %>
+    <%= @dog.price %> € / jour
     <br>
     <strong>Description</strong>
     <%= @dog.description %>
     <br>
+    <strong>Dog Review</strong> 
+     <% @dog.reviews.each do |review| %>
+     <li>Note : <%= review.rating %>/5 - "<%= review.comment %>" 
+     <% end %>
+    </div>
 
-Prévoir la review du dog : 
-<br>
- <%= @dog.reviews %>
-
-  Note :
 
   </div>
   <%=  link_to 'return', root_url , method: :get,  class: "generique" %>

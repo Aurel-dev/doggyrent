@@ -3,7 +3,7 @@
  <div class="col-sm-6 col-sm-offset-3 task-form">
   <h1>Laissez un avis</h1>
   <br>
-      <%= simple_form_for @review do |f| %>
+      <%= simple_form_for [@booking, @review] do |f| %>
       <%= f.input :rating, inclusion:{ in: 0..5, :presence => true }%>
       <%= f.input :comment, placeholder: "Laisser un avis" %>
       <%= f.submit "Publier votre avis", class: "btn btn-primary" %>

@@ -1,6 +1,5 @@
 class ReviewsController < ApplicationController
  before_action :set_review, only: [ :show, :edit, :update, :destroy ]
- # before_action :set_booking, only: [ :new, :create]
 
   def index
     @reviews = Review.all
@@ -12,12 +11,11 @@ class ReviewsController < ApplicationController
   end
     
   def create
-    @booking= Booking.find(params[:booking_id])
+    @booking = Booking.find(params[:id])
     @review = Review.new(review_params)
     @review.booking = @booking
-    @review.user = current_user
-    if @review.save 
-      redirect to @review, notice: 'Votre avis a été enregistré !'
+    if @review.save
+      redirect_to dogs_path, notice: 'Votre avis a été enregistré !'
     else
       render :new
     end
@@ -34,12 +32,8 @@ class ReviewsController < ApplicationController
 private
 
   def set_review
-    @review = Review.find(params[:id]) #verifier le params
+    @review = Review.find(params[:id])
   end
-
-  # def set_booking
-  # @booking = Booking.find(params[:booking_id])
-  # end
 
 
   def review_params
