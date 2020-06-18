@@ -11,14 +11,19 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @dog = Dog.find(params[:dog_id])
   end
 
   def create
-    @booking = Booking.new(booking_params)
+  @dog = Dog.find(params[:dog_id])
+  @booking = Booking.new(booking_params)
+  @booking.dog = @dog
+  @booking.user = current_user
+  @booking.booking_date = Date.today
     if @booking.save
-      redirect_to bookings_path(@booking)
+    redirect_to bookings_path(@booking)
     else
-      render :new
+    render :new
     end
   end
 
@@ -26,17 +31,17 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking.destroy
-    redirect_to bookings_path(@booking)
+  @booking.destroy
+  redirect_to bookings_path(@booking)
   end
     
  private
 
   def find_booking
-    @booking = Booking.find(params[:booking_id])
+  @booking = Booking.find(params[:booking_id])
   end
 
   def booking_params
-    params.require(:booking).permit(:check_in_date, :check_out_date)
+  params.require(:booking).permit(:check_in_date, :check_out_date, :user_id, :dog_id)
   end
 end
