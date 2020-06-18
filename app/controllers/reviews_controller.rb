@@ -7,12 +7,15 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @booking= Booking.find(params[:booking_id])
   end
     
   def create
+    @booking = Booking.find(params[:id])
     @review = Review.new(review_params)
-    if @review.save 
-      redirect to @review, notice: 'Votre avis a été enregistré !'
+    @review.booking = @booking
+    if @review.save
+      redirect_to dogs_path, notice: 'Votre avis a été enregistré !'
     else
       render :new
     end
@@ -29,7 +32,7 @@ class ReviewsController < ApplicationController
 private
 
   def set_review
-    @review = Review.find(params[:id]) #verifier le params
+    @review = Review.find(params[:id])
   end
 
 

@@ -4,7 +4,8 @@
  <div class="col-sm-6 col-sm-offset-3 task-form bg-white">
 
   <h1>Laissez un avis</h1>
-      <%= simple_form_for @review do |f| %>
+  <br>
+      <%= simple_form_for [@booking, @review] do |f| %>
       <%= f.input :rating, inclusion:{ in: 0..5, :presence => true }%>
       <%= f.input :comment, placeholder: "Laisser un avis" %>
       <%= f.submit "Publier votre avis", class: "generique" %>
@@ -12,6 +13,7 @@
        <%= f.button :button, link_to("Faire une nouvelle réservation", dogs_path, class:"generique") %>
        <%= link_to "Revenir à l'accueil", root_url ,class:"generique" %>
     <% end %>
+     <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
  </div>
  <br>
 </div>
