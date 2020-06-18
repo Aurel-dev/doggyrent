@@ -1,9 +1,16 @@
 
-.img-color{
-    background-color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.imgcontainer{
+    margin-left: 20px;
+    width: 450px;
+    height: 490px;
+    text-align: center;
 }
+.imgcolor{
+    height: 278px;
+    background-color: rgba(248, 132, 107, 0.5);
+    border-radius: 30px;
+}
+.titletext{
+margin-top: 20px;
 
-
+}
