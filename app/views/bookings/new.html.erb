@@ -1,3 +1,6 @@
+<%= render 'shared/navbar' %>
+
+<div class="bookingform">
 
 <h1 class="text-center ">Réservez ce chien</h1>
 
@@ -7,13 +10,14 @@
       <%= f.input :check_in_date, class:"form-control" %>
       <%= f.input :check_out_date, class:"form-control" %>
       <%= f.submit class:"form-control form-btn" %>
+      <%=  link_to 'booking', create_dog_booking_path(@dog) , method: :post,  class: "generique" %>
    <% end %>
   </div>
 </div>
-
 (Lien vers le bouton booking a valider)
 <br>
 <br>
 <br>
 <%= link_to "Voir mes réservations", bookings_path %>
+
 
