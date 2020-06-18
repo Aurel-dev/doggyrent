@@ -14,10 +14,7 @@ Rails.application.routes.draw do
   get "/bookings/:booking_id/edit", to: "bookings#edit" , as: :edit_booking
   delete "/bookings/:booking_id/delete", to: "bookings#destroy",  as: :delete_booking
   resources :dogs do 
-    resources :bookings, only: [:new, :create]
+     resources :bookings, only: [:new, :create]
   end
-<<<<<<< HEAD
-  end 
-=======
-  end
->>>>>>> 1f0761246c0438bbb4ecccf5d03d2d237f0463b5
+end
+
