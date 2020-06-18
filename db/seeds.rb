@@ -1,5 +1,6 @@
 require 'json'
 
+<<<<<<< HEAD
 Review.destroy_all
 Dog.destroy_all
 User.destroy_all
@@ -59,6 +60,32 @@ Review.create!(
     rating: 2,
     booking_id: Booking.second.id
 )
+=======
+
+require 'open-uri'
+Review.destroy_all
+Dog.destroy_all
+User.destroy_all
+Booking.destroy_all
+user = User.create!(
+    email: "bonjour@gmail.com",
+    password: "azerty"
+)
+dog = Dog.create!(
+    name: "Gaspar",
+    race: "Pitbull",
+    location: "Rue Massena",
+    user: user,
+    age: 19,
+    price: 13.5,
+    description: "Fou à lier"
+)
+booking = Booking.create!(
+    user: user,
+    dog: dog,
+    check_in_date: Date.today
+)
+>>>>>>> b1d3846b51e552cde1b32228b20ecdadef5dec7b
 Review.create!(
     comment: "Sympa",
     rating: 4,
