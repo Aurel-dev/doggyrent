@@ -1,7 +1,11 @@
 <%= render 'shared/navbar' %>
-<h1>Infos sur chien n°....</h1>
+
+<div class = "containerd">
+
 <div class= "containerposting">
+
   <div class="containershowdog">
+  <h1>Infos sur chien n°....</h1>
     <strong>Name</strong>
     <%= @dog.name %>
     <br>
@@ -31,8 +35,5 @@
   <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
   <%=  link_to 'booking', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
  </div>
-<br>
-<br>
-<br>
-
-
+</div>
+  <%= render 'shared/footer' %>

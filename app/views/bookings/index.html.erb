@@ -1,18 +1,22 @@
-<h1>Mes réservations</h1>
+<%= render 'shared/navbar' %>
+<div class ="containerd">
+<div class ="formulaire-booking">
 
  <% @bookings.each do |booking| %>
+ <div class = "formulaire-separation" >
+ <h2>réservations <%= booking.user_id %></h2>
  <p> Booking User N°: <%= booking.user_id %></p>
   <p>Booking Dog N°<%= booking.dog_id %></p>
-  <p>Booking Date : <%= booking.booking_date %> </p>
-  <%= link_to 'Laisser un avis', new_review_path(booking.id) %></td>
+  <p>Booking date : <%= booking.booking_date %> </p>
+  <%= link_to 'Laisser un avis', new_review_path(booking.id), class:"generique" %></td>
   <%# <%= link_to 'Modifier la réservation', edit_booking_path(booking.id) %>
-  <%= link_to 'Annuler la réservation', delete_booking_path(booking.id), method: :delete %></i>
+  <%= link_to 'Annuler la réservation', delete_booking_path(booking.id), method: :delete, class:"generique" %></i>
+  <%= link_to("Faire une nouvelle réservation", dogs_path, class:"generique") %>
+  <%= link_to "Revenir à l'accueil", root_url ,class:"generique" %>
+  </div>
   <% end %>
   </td>
 
-<br><br><br><br><br><br>
-<%= link_to("Faire une nouvelle réservation", dogs_path, class:"btn btn-success") %>
-<br><br><br><br><br><br>
-<%= link_to "Revenir à l'accueil", root_url %>
+    
 
-
+  <%= render 'shared/footer' %>
