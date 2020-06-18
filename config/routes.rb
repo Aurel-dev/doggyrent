@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   post "/reviews", to: "reviews#new"
 
 
-  get "/bookings", to: "bookings#index"
-  post "/bookings/create", to: "bookings#create", as: :create
+  get "/bookings", to: "bookings#index", as: :bookings
+  post "/bookings", to: "bookings#create", as: :create
   post "/bookings/:id/review", to: "reviews#create"
   get "/bookings/:booking_id/reviews/new", to: "reviews#new" , as: :new_review
   get "/bookings/:booking_id/edit", to: "bookings#edit" , as: :edit_booking

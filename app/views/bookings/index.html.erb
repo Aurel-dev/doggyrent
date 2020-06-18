@@ -5,7 +5,7 @@
   <p>Booking Dog N°<%= booking.dog_id %></p>
   <p>Booking date : <%= booking.booking_date %> </p>
   <%= link_to 'Laisser un avis', new_review_path(booking.id) %></td>
-  <%= link_to 'Modifier la réservation', edit_booking_path(booking.id) %></td>
+  <%# <%= link_to 'Modifier la réservation', edit_booking_path(booking.id) %>
   <%= link_to 'Annuler la réservation', delete_booking_path(booking.id), method: :delete %></i>
   <% end %>
   </td>

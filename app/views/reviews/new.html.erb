@@ -1,1 +1,13 @@
-<h3>Add a review</h3>
+<%= render 'shared/navbar' %>
+<div class= "containerreview">
+ <div class="col-sm-6 col-sm-offset-3 task-form">
+  <h1>Laissez un avis</h1>
+  <br>
+      <%= simple_form_for @review do |f| %>
+      <%= f.input :rating %>
+      <%= f.input :comment, placeholder: "Laisser un avis" %>
+      <%= f.submit "Publier votre avis", class: "btn btn-primary" %>
+      <%= f.button :button, "Annuler", type: "reset", class: "btn-outline-secondary" %>
+    <% end %>
+ </div>
+</div>

@@ -1,19 +1,22 @@
+<%= render 'shared/navbar' %>
 
-<h1 class="text-center ">Réservez ce chien</h1>
+<div class="bookingform">
 
-<div class="row">
   <div class="col-sm-6 col-sm-offset-3 task-form">
-      <%= simple_form_for(@booking) do |f| %>
+  <h1 class="text-center ">Réservez ce chien</h1>
+      <%= simple_form_for @booking do |f| %>
       <%= f.input :check_in_date, class:"form-control" %>
       <%= f.input :check_out_date, class:"form-control" %>
-      <%= f.submit class:"form-control form-btn" %>
+      <%= f.submit class:"form-control form-btn"%>
+      <%# <%= link_to("create a booking", bookings_path, class:"form-control form-btn") %>
    <% end %>
+   <%= link_to "create a booking", bookings_path %>
   </div>
 </div>
-
 (Lien vers le bouton booking a valider)
 <br>
 <br>
 <br>
 <%= link_to "Voir mes réservations", bookings_path %>
+
 
