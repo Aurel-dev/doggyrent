@@ -10,17 +10,28 @@
     <strong>Name</strong>
     <%= @dog.name %>
     <br>
+    <strong>Race</strong>
+    <%= @dog.race %>
+    <br>
     <strong>Location</strong>
     <%= @dog.location %>
     <br>
-    <strong>User</strong>
-    <%= @dog.user %>
+    <strong>User N°</strong>
+    <%= @dog.user.id %>
     <br>
     <strong>Price</strong>
-    <%= @dog.price %>
+    <%= @dog.price %> € / jour
     <br>
     <strong>Description</strong>
     <%= @dog.description %>
+    <br>
+    <strong>Dog Review</strong> 
+     <% @dog.reviews.each do |review| %>
+     <li>Note : <%= review.rating %>/5 - "<%= review.comment %>" 
+     <% end %>
+    </div>
+
+
   </div>
   <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
   <%=  link_to 'booking', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>

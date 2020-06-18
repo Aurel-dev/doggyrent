@@ -1,9 +1,13 @@
 <%= render 'shared/navbar' %>
- 
+<%= render 'shared/search-bar' %>
 <table>
     <tbody></tbody>
     <% if @dogs.length == 0 %>
-        <p>Hello</p>
+        <center> <h2>Ouaf ! Aucun chien n'est disponible dans la ville indiquée !</h2>
+        <%= image_tag "chienclindoeil.jpg"%>
+        <br>
+        <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
+        </center>
     <% end %>
         <% @dogs.each do |dog| %>
            
