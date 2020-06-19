@@ -4,8 +4,7 @@
 
  <% @bookings.each do |booking| %>
  <div class = "formulaire-separation" >
- <h2>Réservation de <%= booking.user_id %></h2>
- <p>Booking User N°: <%= booking.user_id %></p>
+ <h2>Réservation de client N° <%= booking.user_id %></h2>
   <p>Chien réservé N°<%= booking.dog_id %></p>
   <p>Date de réservation : <%= booking.booking_date %> </p>
   <p>Date de début de location : <%= booking.check_in_date %> </p>
