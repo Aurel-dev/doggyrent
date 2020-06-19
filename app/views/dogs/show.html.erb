@@ -10,14 +10,14 @@
 
 
  
- <% if @dog.photo.attached?%>
-    <div class="alignement">
+    <% if @dog.photo.attached?%>
+     <div class="alignement">
       <%= cl_image_tag @dog.photo.key, height: 400, width: 500, crop: :fill %>
+      <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
+      <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
         <%# <% else %>
         <%# <% image_tag %>
         <br>
-        <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
-        <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
      </div>
     <% end %>
     <div class ="contentannonce">
@@ -42,11 +42,9 @@
     <strong>Avis sur le chien</strong> 
      <% @dog.reviews.each do |review| %>
      <li>Note : <%= review.rating %>/5 - "<%= review.comment %>" 
-   
      <% end %>
-
+     <br>
     </div>
-
   </div>
  </div>
 </div>
