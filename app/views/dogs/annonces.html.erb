@@ -5,7 +5,10 @@
 
 <div class = "formulaire-separation" >
  <% @dogs.each do |dog| %>
+p>Mon annonce</p>
  <p>Mon chien : <%= dog.name %> </p>
+  <p>Son prix: <%= dog.price %> € par jour </p>
+   <p>Où venir le chercher : <%= dog.location %></p>
 <%= link_to 'Supprimer cette annonce', root_url,  method: :delete, class:"generique" %></i>
 <%# <%= link_to 'Modifier cette annonce', root_url,  class:"generique" %>
 <%= link_to "Revenir à la liste", root_url ,class:"generique" %>
