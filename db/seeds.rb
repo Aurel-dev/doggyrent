@@ -107,6 +107,7 @@ Review.create!(
     comment: "N'aime pas rester confiné",
     rating: 2,
     booking_id: Booking.second.id
+    
 )
 # Review.create!(
 #     comment: "Sympa",
