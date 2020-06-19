@@ -8,7 +8,9 @@
 
   <h1>Infos sur chien n°<%= @dog.id %></h1>
 
-    <% if @dog.photo.attached?%>
+
+ <% if @dog.photo.attached?%>
+
       <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill %>
     <%# <% else %>
       <%# <% image_tag %>

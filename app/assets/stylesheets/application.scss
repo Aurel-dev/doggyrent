@@ -12,3 +12,9 @@
 @import "components/index";
 @import "pages/index";
 @import "flatpickr/dist/flatpickr";
+
+// Specific CSS for your home-page
+body {
+    font-family: 'Montserrat-Bold';
+    src: url('/path-to/Montserrat-Bold.ttf')
+ }
