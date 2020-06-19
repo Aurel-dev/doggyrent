@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
 
   get "/bookings", to: "bookings#index", as: :bookings
+  get "/dogs/annonces", to: "dogs#annonces", as: :new
   post "/bookings", to: "bookings#create", as: :create
   post "/bookings/:id/review", to: "reviews#create", as: :booking_reviews
   get "/bookings/:booking_id/reviews/new", to: "reviews#new" , as: :new_review
