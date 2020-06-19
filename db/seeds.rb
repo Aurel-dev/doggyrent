@@ -19,7 +19,7 @@ User.create!(
 Dog.create!(
     name: "Gaspar",
     race: "Pitbull",
-    location: "La Plage, 122 rue Solférino - Lille",
+    location: "Lille",
     user_id: User.first.id,
     age: 19,
     price: 13,
@@ -29,13 +29,62 @@ Dog.create!(
 Dog.create!(
     name: "Covid",
     race: "Malinois",
-    location: "57 Rue de Varenne, 75007 Paris",
+    location: "Paris",
     user_id: User.second.id,
     age: 7,
     price: 24,
     description: "Aime les personnes fragiles"
 )
 
+Dog.create!(
+    name: "Kronenbourg",
+    race: "Fox terrier",
+    location: "Lille",
+    user_id: User.second.id,
+    age: 3,
+    price: 6,
+    description: "A souvent soif"
+)
+
+Dog.create!(
+    name: "Hot",
+    race: "Chihuahua",
+    location: "Lille",
+    user_id: User.second.id,
+    age: 6,
+    price: 32,
+    description: "Dog de première qualité"
+)
+
+Dog.create!(
+    name: "Bernard",
+    race: "Saint-Bernard",
+    location: "Paris",
+    user_id: User.second.id,
+    age: 11,
+    price: 29,
+    description: "Prend peu de place"
+)
+
+Dog.create!(
+    name: "Moscou",
+    race: "Husky",
+    location: "Lille",
+    user_id: User.second.id,
+    age: 7,
+    price: 24,
+    description: "A horreur du froid"
+)
+
+Dog.create!(
+    name: "Brian",
+    race: "Caniche",
+    location: "New York",
+    user_id: User.second.id,
+    age: 10,
+    price: 12,
+    description: "Sympa mais collant"
+)
 Booking.create!(
     user_id: User.first.id,
     dog_id: Dog.first.id,
@@ -59,8 +108,8 @@ Review.create!(
     rating: 2,
     booking_id: Booking.second.id
 )
-Review.create!(
-    comment: "Sympa",
-    rating: 4,
-    booking: booking
-)
+# Review.create!(
+#     comment: "Sympa",
+#     rating: 4,
+#     # booking: booking,
+# )

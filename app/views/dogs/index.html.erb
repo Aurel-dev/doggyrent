@@ -11,22 +11,28 @@
     <% end %>
         <% @dogs.each do |dog| %>
            
-           <div class="carde">
-            <div class="card-product">
-           
-            <%= image_tag "img1.svg",class: :img %>
+         <div class="carde">
+          <div class="card-product">
+
+            <%= image_tag "chien.jpg"%>
             <%# <%= cl_image_tag("…/v1592465738/gnrqphwbzqqn0etfr8ta.jpg",
-            width: 400, height: 300, crop: :fill) %> %>
+            width: 400, height: 300, crop: :fill) %> 
             <div class="card-product-infos">
-                <%= dog.name %>
-            <%= dog.description %>
-            <%= link_to 'Show', dog %>
+                <h5><strong><%= dog.name %></strong></h5>
+                <%= dog.description %>
+                <br>
+                <br>
+                <%= link_to 'Découvrir', dog, class: "btn-accessshow" %>
             </div>
-            </div>
-            </div>
+          </div>
+         </div>
                 
         
         <% end %>
     </tbody>
 </table>
-    <%= render 'shared/footer' %>
+
+<%= render 'shared/footer' %>
+
+
+

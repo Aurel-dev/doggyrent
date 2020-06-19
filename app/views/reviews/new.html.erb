@@ -7,13 +7,20 @@
   <br>
       <%= simple_form_for [@booking, @review] do |f| %>
       <%= f.input :rating, inclusion:{ in: 0..5, :presence => true }%>
+      <div class="rating rating2"><!--
+		    --><a href="#5" title="Give 5 stars">★</a><!--
+		    --><a href="#4" title="Give 4 stars">★</a><!--
+		    --><a href="#3" title="Give 3 stars">★</a><!--
+		    --><a href="#2" title="Give 2 stars">★</a><!--
+		    --><a href="#1" title="Give 1 star">★</a>
+	    </div>
       <%= f.input :comment, placeholder: "Laisser un avis" %>
       <%= f.submit "Publier votre avis", class: "generique" %>
-      <%= f.button :button, "Annuler", type: "reset", class: "generique" %>
-       <%= f.button :button, link_to("Faire une nouvelle réservation", dogs_path, class:"generique") %>
-       <%= link_to "Revenir à l'accueil", root_url ,class:"generique" %>
+      <%# <%= f.button :button, "Annuler", type: "reset", class: "generique" %> 
+       <%= f.button :button, link_to("Nouvelle réservation", dogs_path, class:"generique") %>
+       <%= link_to "Accueil", root_url ,class:"generique" %>
     <% end %>
-     <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
+     <%# <%=  link_to 'return', root_url , method: :get,  class: "generique" %> 
  </div>
  <br>
 </div>

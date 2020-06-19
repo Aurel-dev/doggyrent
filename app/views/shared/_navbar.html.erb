@@ -7,10 +7,9 @@
     </div>
 
 <ul class = "nav justify-content-center">
-    <li class="nav-item"> <a class= "lien">Featurs</a></li>
-    <li class="nav-item"> <a class= "lien">Pricing</a></li>
-    <li class="nav-item"> <a class= "lien">Communinty</a></li>
-    <li class="nav-item"> <a class= "lien">Suport</a></li>
+    <li class="nav-item"> <a class= "lien">Home</a></li>
+    <li class="nav-item"> <a class= "lien">Communauté</a></li>
+    <li class="nav-item"> <a class= "lien">A propos</a></li>
     </ul>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,8 +21,8 @@
  <li class="nav-item dropdown">
 
       <li class="nav-item dropdown">
-        <%=  link_to 'log in', new_user_session_path, method: :get,  class: "generique" %>
-        <%=  link_to 'Register', new_user_registration_path, method: :get,  class: "generique" %>
+        <%=  link_to 'Se connecter', new_user_session_path, method: :get,  class: "generique" %>
+        <%=  link_to 'Créer un compte', new_user_registration_path, method: :get,  class: "generique" %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>

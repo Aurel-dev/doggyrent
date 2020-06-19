@@ -3,7 +3,9 @@
 <div class="bookingform">
 
   <div class="col-sm-6 col-sm-offset-3 task-form">
+
   <h1 class="text-center "> <i class='fas fa-dog' style='font-size:36px;color:red'></i> C'est quand la promenade ? <i class='fas fa-dog' style='font-size:36px;color:red'></i> </h1>
+
       <%= simple_form_for [@dog, @booking] do |f| %>
       <%= f.input :check_in_date, label: "Date de début de location" ,  class:"form-control" %>
       <%= f.input :check_out_date, label: "Date de fin de location", class:"form-control" %>
@@ -22,6 +24,6 @@
 </div>
 <br>
 
-  <%= render 'shared/footer' %>
+<%= render 'shared/footer' %>
 
 
