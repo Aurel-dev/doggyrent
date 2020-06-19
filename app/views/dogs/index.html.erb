@@ -5,7 +5,9 @@
     <% if @dogs.length == 0 %>
         <center> <h2>Ouaf ! Aucun chien n'est disponible dans la ville indiquée !</h2>
         <%= image_tag "chienclindoeil.jpg"%>
+        
         <br>
+              <br>
         <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
         </center>
     <% end %>
