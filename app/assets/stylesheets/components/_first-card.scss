@@ -1,4 +1,6 @@
 .container{
+ 
+
     margin-top: 35px;
     display: flex;
     align-items: center;
@@ -8,18 +10,21 @@
     background-color: rgba(248, 132, 107, 0.5);
     border-radius: 70px;
     font-size: 20px;
-    text-align: center;
-}
-.first-card{
-    
+  
 }
 
+.first-card{
+
+}
+
+.img-first-card{
+margin-left: 150px;
+    width: 400px;
+    height: 400px;
+
+}
 .strong{
     font-size: 60px;
    font-weight: bold;
 }
 
-.container .video{
-    height: 300px;
-    width: 300px;
-}
