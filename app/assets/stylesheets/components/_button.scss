@@ -2,13 +2,12 @@
 .generique{
 background-color: #F8846B;
 border-color: #F8846B;
-
 color: white;
 border-radius: 6px;
 font-family: 'Montserrat-Bold';
 font-style: normal;
-padding-top: 2px;
-padding-bottom: 2px;
+padding-top: 4px;
+padding-bottom: 4px;
 padding-left: 20px;
 padding-right: 20px;
 font-size: 20px;
@@ -17,6 +16,12 @@ margin: 12px;
 
 }
 
+.generique:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #ff5934;
+    
+}
 .specifique{
 
 border-color: black;
