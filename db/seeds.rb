@@ -23,7 +23,7 @@ Dog.create!(
     user_id: User.first.id,
     age: 19,
     price: 13,
-    description: "Cherche a se reproduire"
+    description: "'Cherche a se reproduire'"
 )
 
 Dog.create!(
@@ -33,7 +33,7 @@ Dog.create!(
     user_id: User.second.id,
     age: 7,
     price: 24,
-    description: "Aime les personnes fragiles"
+    description: "'Aime les personnes fragiles'"
 )
 
 Dog.create!(
@@ -43,7 +43,7 @@ Dog.create!(
     user_id: User.second.id,
     age: 3,
     price: 6,
-    description: "A souvent soif"
+    description: "'A souvent soif'"
 )
 
 Dog.create!(
@@ -53,7 +53,7 @@ Dog.create!(
     user_id: User.second.id,
     age: 6,
     price: 32,
-    description: "Dog de première qualité"
+    description: "'Dog de première qualité'"
 )
 
 Dog.create!(
@@ -63,7 +63,7 @@ Dog.create!(
     user_id: User.second.id,
     age: 11,
     price: 29,
-    description: "Prend peu de place"
+    description: "'Prend peu de place'"
 )
 
 Dog.create!(
@@ -73,7 +73,7 @@ Dog.create!(
     user_id: User.second.id,
     age: 7,
     price: 24,
-    description: "A horreur du froid"
+    description: "'A horreur du froid'"
 )
 
 Dog.create!(
@@ -83,7 +83,7 @@ Dog.create!(
     user_id: User.second.id,
     age: 10,
     price: 12,
-    description: "Sympa mais collant"
+    description: "'Sympa mais collant'"
 )
 Booking.create!(
     user_id: User.first.id,
