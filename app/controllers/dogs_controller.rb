@@ -9,6 +9,10 @@ class DogsController < ApplicationController
             @dogs = Dog.all
         end
     end
+
+    def annonces
+        @dogs = Dog.where(user_id: current_user.id)
+    end
     
     def new 
         @dog = Dog.new
