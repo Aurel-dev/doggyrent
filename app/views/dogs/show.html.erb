@@ -7,6 +7,9 @@
   <div class="containershowdog">
 
   <h1>Infos sur chien n°<%= @dog.id %></h1>
+
+      <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill %>
+
     <strong>Nom</strong>
     <%= @dog.name %>
     <br>
