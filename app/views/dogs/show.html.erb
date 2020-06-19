@@ -3,19 +3,24 @@
 <div class = "containerd">
 
 <div class= "containerposting">
-
+<div class="btntitle">
+<h1>Infos sur chien n°<%= @dog.id %>    </h1>
+</div>
   <div class="containershowdog">
 
-  <h1>Infos sur chien n°<%= @dog.id %></h1>
 
-
+ 
  <% if @dog.photo.attached?%>
-
-      <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill %>
-    <%# <% else %>
-      <%# <% image_tag %>
+    <div class="alignement">
+      <%= cl_image_tag @dog.photo.key, height: 400, width: 500, crop: :fill %>
+        <%# <% else %>
+        <%# <% image_tag %>
+        <br>
+        <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
+        <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
+     </div>
     <% end %>
-
+    <div class ="contentannonce">
     <strong>Nom</strong>
     <%= @dog.name %>
     <br>
@@ -38,12 +43,10 @@
      <% @dog.reviews.each do |review| %>
      <li>Note : <%= review.rating %>/5 - "<%= review.comment %>" 
      <% end %>
+     </div>
     </div>
 
-
   </div>
-  <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
-  <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
  </div>
 </div>
   <%= render 'shared/footer' %>
