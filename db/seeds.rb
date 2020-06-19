@@ -108,8 +108,8 @@ Review.create!(
     rating: 2,
     booking_id: Booking.second.id
 )
-Review.create!(
-    comment: "Sympa",
-    rating: 4,
-    booking: booking
-)
+# Review.create!(
+#     comment: "Sympa",
+#     rating: 4,
+#     # booking: booking,
+# )

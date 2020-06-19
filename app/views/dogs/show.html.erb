@@ -6,26 +6,26 @@
 
   <div class="containershowdog">
 
-  <h1>Infos sur chien n°    <%= @dog.id %></h1>
-    <strong>Name</strong>
+  <h1>Infos sur chien n°<%= @dog.id %></h1>
+    <strong>Nom</strong>
     <%= @dog.name %>
     <br>
     <strong>Race</strong>
     <%= @dog.race %>
     <br>
-    <strong>Location</strong>
+    <strong>Ville</strong>
     <%= @dog.location %>
     <br>
-    <strong>User N°</strong>
+    <strong>Identifiant du propriétaire</strong>
     <%= @dog.user.id %>
     <br>
-    <strong>Price</strong>
+    <strong>Prix</strong>
     <%= @dog.price %> € / jour
     <br>
     <strong>Description</strong>
     <%= @dog.description %>
     <br>
-    <strong>Dog Review</strong> 
+    <strong>Avis sur le chien</strong> 
      <% @dog.reviews.each do |review| %>
      <li>Note : <%= review.rating %>/5 - "<%= review.comment %>" 
      <% end %>
@@ -33,8 +33,8 @@
 
 
   </div>
-  <%=  link_to 'return', root_url , method: :get,  class: "generique" %>
-  <%=  link_to 'booking', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
+  <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
+  <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
  </div>
 </div>
   <%= render 'shared/footer' %>

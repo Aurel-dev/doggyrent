@@ -3,7 +3,7 @@
 <div class="bookingform">
 
   <div class="col-sm-6 col-sm-offset-3 task-form">
-  <h1 class="text-center ">Réservez ce chien</h1>
+  <h1 class="text-center "><i class="fas fa-dog"></i> Réservez ce chien <i class="fas fa-dog"></i></h1>
       <%= simple_form_for [@dog, @booking] do |f| %>
       <%= f.input :check_in_date, class:"form-control" %>
       <%= f.input :check_out_date, class:"form-control" %>
@@ -18,8 +18,5 @@
 </div>
 <br>
 
-  <%= render 'shared/footer' %>
-
-
-
 <%= render 'shared/footer' %>
+
