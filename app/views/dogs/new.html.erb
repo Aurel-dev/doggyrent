@@ -1,17 +1,26 @@
 <%= render 'shared/navbar' %>
-<div class= "container">
-<h1>Creation de Dog</h1>
-  <div class="contentcontainernewdog">
+<div class= "containerd">
+  <div class="fcontainernewdog">
+       <center><h3>Creation de Chien</h3></center>
       <%= simple_form_for @dog do |f| %>
-      <%= f.input :race %>
-      <%= f.input :location %>
-      <%= f.input :name %>
-      <%= f.input :age %>
-      <%= f.input :price %>
-      <%= f.input :photo, as: :file %>
-      <%= f.input :description %>
-    <%= f.submit "ajouter votre chien", class: "btn btn-primary" %>
+
+         <div class="row">
+            <div class="col">
+              <%= f.input :race %>
+              <%= f.input :location %>
+            </div>
+            <div class="col">
+            <%= f.input :name %>
+            <%= f.input :age %>
+            </div>
+        </div>
+              <%= f.input :price %>
+              <%= f.input :photo, as: :file  %>
+                  <%= f.input :description , class: "form-control" %>
+                  <%= f.submit "ajouter votre chien", class: "generique" %>
+
     <% end %>
   </div>
-</div>
-  <%= render 'shared/footer' %>
+ </div>
+
+<%= render 'shared/footer' %>
