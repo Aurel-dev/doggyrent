@@ -24,12 +24,13 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import {hello} from "./components/hello"
+
+import { ratings } from "./components/stars"
 import "../plugins/flatpickr"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
 
-  hello();
+  ratings();
 });
