@@ -37,13 +37,15 @@
     <strong>Avis sur le chien</strong> 
      <% @dog.reviews.each do |review| %>
      <li>Note : <%= review.rating %>/5 - "<%= review.comment %>" 
+   
      <% end %>
+        <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
+  <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
     </div>
 
 
   </div>
-  <%=  link_to 'Retour', root_url , method: :get,  class: "generique" %>
-  <%=  link_to 'Reserver', new_dog_booking_path(@dog) , method: :get,  class: "generique" %>
+ 
  </div>
 </div>
   <%= render 'shared/footer' %>
